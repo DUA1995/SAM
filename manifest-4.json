@@ -1,0 +1,14 @@
+{
+  "name": "DUA",
+  "theme_color": "#add8e6",
+  "background_color": "#b0d1d4",
+  "short_name": "dua",
+  "id": "{   id: \"/?homescreen=1\" }",
+  "description": "good analysis tool",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "education"
+  ]
+}
