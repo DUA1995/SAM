@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Tool</title>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea, input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .chart-container canvas {
+            max-width: 500px;
+            max-height: 300px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Analysis Tool</h1>
+    <textarea id="dataInput" placeholder="Enter data values (e.g., 1, 2, 3, 4, Male, Female)"></textarea>
+    <input id="categories" placeholder="Enter categories (e.g., Male, Female, 1-10, <10, >10)">
+    <button id="analyzeBtn">Analyze Data</button>
+
+    <div id="analysisTable"></div>
+
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="buttons-container">
+        <button id="copyTableBtn">Copy Table</button>
+        <button id="copyBarChartBtn">Copy Bar Chart</button>
+        <button id="copyPieChartBtn">Copy Pie Chart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
